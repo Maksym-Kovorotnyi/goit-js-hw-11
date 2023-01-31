@@ -15,6 +15,7 @@ function onFormSumbited(e) {
     if (inputValue.trim() === '') {
         clearMurkup(e)
         Notiflix.Notify.info('If you dont write anything, we wont find anything')
+        loadMoreBtn.classList.add('is-hiden')   
         return
         }
     fetchImg(inputValue, page).then(images => {
